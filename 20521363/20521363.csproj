@@ -100,6 +100,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\class_history_music.cs" />
     <Compile Include="Model\class_playlist.cs" />
     <Compile Include="Model\Music.cs" />
     <Compile Include="play.cs">

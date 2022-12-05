@@ -30,51 +30,76 @@ namespace _20521363
         private void show_list_music_homeand_love()
         {
             play_music = new List<Music>();
-            for (int i = 0; i < musicout.Count; i++)
+            if (text_out != "Lịch sử")
             {
-                if (text_out != "Yêu thích" && text_out != "Lịch sử")
+                for (int i = 0; i < musicout.Count; i++)
                 {
-                    if (i == 0 || i == 10 || i == 20 || i == 30)
+                    if (text_out != "Yêu thích")
                     {
-                        Panel pn_type = new Panel();
-                        Label lbl_type = new Label();
-                        lbl_type.Text = musicout[i].Type + "-------------------------------------------------------------------------------------------------------------------------------------------------------";
-                        lbl_type.AutoSize = true;
-                        lbl_type.Font = new Font("Times New Roman", 20, FontStyle.Bold);
-                        lbl_type.Location = new Point(1, 10);
-                        pn_type.Size = new Size(1200, 50);
-                        pn_type.Controls.Add(lbl_type);
-                        fpn.Controls.Add(pn_type);
+                        if (i == 0 || i == 10 || i == 20 || i == 30)
+                        {
+                            Panel pn_type = new Panel();
+                            Label lbl_type = new Label();
+                            lbl_type.Text = musicout[i].Type + "-------------------------------------------------------------------------------------------------------------------------------------------------------";
+                            lbl_type.AutoSize = true;
+                            lbl_type.Font = new Font("Times New Roman", 20, FontStyle.Bold);
+                            lbl_type.Location = new Point(1, 10);
+                            pn_type.Size = new Size(1200, 50);
+                            pn_type.Controls.Add(lbl_type);
+                            fpn.Controls.Add(pn_type);
+                        }
                     }
+                    Label lbl = new Label();
+                    lbl.Text = musicout[i].Name;
+                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
+                    lbl.AutoSize = true;
+                    lbl.Location = new Point(90, 20);
+
+                    Label lbl2 = new Label();
+                    lbl2.Text = musicout[i].Singer;
+                    lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
+                    lbl2.AutoSize = true;
+                    lbl2.Location = new Point(90, 45);
+
+                    PictureBox ptb = new PictureBox();
+                    ptb.Tag = musicout[i].Name;
+                    ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                    ptb.Size = new Size(70, 70);
+                    ptb.Image = musicout[i].Image;
+                    ptb.Location = new Point(10, 10);
+
+                    Panel pn = new Panel();
+                    pn.Size = new Size(400, 90);
+                    pn.Controls.Add(ptb);
+                    pn.Controls.Add(lbl);
+                    pn.Controls.Add(lbl2);
+                    fpn.Controls.Add(pn);
+                    play_music.Add(musicout[i]);
+                    ptb.Click += new EventHandler(ptb_click);
                 }
+            }
+            if (text_out == "Lịch sử")
+            {
+                for (int i = 0; i < history_music_play.Count; i++)
+                {
+                    Label lbl = new Label();
+                    lbl.Text = history_music_play[i].Name;
+                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
+                    lbl.AutoSize = true;
+                    lbl.Location = new Point(90, 20);
 
-                Label lbl = new Label();
-                lbl.Text = musicout[i].Name;
-                lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                lbl.AutoSize = true;
-                lbl.Location = new Point(90, 20);
+                    Label lbl2 = new Label();
+                    lbl2.Text = history_music_play[i].Date;
+                    lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
+                    lbl2.AutoSize = true;
+                    lbl2.Location = new Point(90, 45);
 
-                Label lbl2 = new Label();
-                lbl2.Text = musicout[i].Singer;
-                lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
-                lbl2.AutoSize = true;
-                lbl2.Location = new Point(90, 45);
-
-                PictureBox ptb = new PictureBox();
-                ptb.Tag = musicout[i].Name;
-                ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                ptb.Size = new Size(70, 70);
-                ptb.Image = musicout[i].Image;
-                ptb.Location = new Point(10, 10);
-
-                Panel pn = new Panel();
-                pn.Size = new Size(400, 90);
-                pn.Controls.Add(ptb);
-                pn.Controls.Add(lbl);
-                pn.Controls.Add(lbl2);
-                fpn.Controls.Add(pn);
-                play_music.Add(musicout[i]);
-                ptb.Click += new EventHandler(ptb_click);
+                    Panel pn = new Panel();
+                    pn.Size = new Size(400, 90);
+                    pn.Controls.Add(lbl);
+                    pn.Controls.Add(lbl2);
+                    fpn.Controls.Add(pn);
+                }
             }
         }
 

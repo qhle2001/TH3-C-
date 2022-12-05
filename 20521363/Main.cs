@@ -20,6 +20,7 @@ namespace _20521363
         public static List<Music> history_music = new List<Music>();
         public static List<string> _playlist = new List<string>();
         public static List<class_playlist> name_song_in_playlist = new List<class_playlist>();
+        public static List<class_history_music> history_music_play = new List<class_history_music>();
         public Main()
         {
             InitializeComponent();
@@ -164,6 +165,7 @@ namespace _20521363
             ptbhistory.BackColor = Color.FromArgb(224, 238, 238);
             Home uc = new Home(music, label1.Text);
             addUserControl(uc);
+            lb_trademark.Text = DateTime.Now.ToString();
 
         }
 
@@ -303,7 +305,7 @@ namespace _20521363
             ptHDM.BackColor = Color.FromArgb(224, 238, 238);
             lbhistory.BackColor = Color.FromArgb(131, 139, 139);
             ptbhistory.BackColor = Color.FromArgb(131, 139, 139);
-            Home uc = new Home(history_music, lbhistory.Text);
+            Home uc = new Home(music, lbhistory.Text);
             addUserControl(uc);
         }
 

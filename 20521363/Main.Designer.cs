@@ -30,49 +30,49 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ptbhistory = new System.Windows.Forms.PictureBox();
+            this.lbhistory = new System.Windows.Forms.Label();
             this.pnDM = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.ptDM = new System.Windows.Forms.PictureBox();
+            this.ptHDM = new System.Windows.Forms.PictureBox();
+            this.ptLove = new System.Windows.Forms.PictureBox();
+            this.ptPlay = new System.Windows.Forms.PictureBox();
+            this.ptHome = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_trademark = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbA = new System.Windows.Forms.Label();
-            this.txtB = new System.Windows.Forms.TextBox();
-            this.pnContainer = new System.Windows.Forms.Panel();
-            this.lbhistory = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.ptbA = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbA = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.ptbhistory = new System.Windows.Forms.PictureBox();
-            this.ptDM = new System.Windows.Forms.PictureBox();
-            this.ptHDM = new System.Windows.Forms.PictureBox();
-            this.ptLove = new System.Windows.Forms.PictureBox();
-            this.ptPlay = new System.Windows.Forms.PictureBox();
-            this.ptHome = new System.Windows.Forms.PictureBox();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.pnContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbhistory)).BeginInit();
             this.pnDM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptLove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHome)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbhistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptDM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptHDM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptLove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptPlay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,6 +97,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(271, 798);
             this.panel1.TabIndex = 0;
+            // 
+            // ptbhistory
+            // 
+            this.ptbhistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbhistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ptbhistory.Image = ((System.Drawing.Image)(resources.GetObject("ptbhistory.Image")));
+            this.ptbhistory.Location = new System.Drawing.Point(12, 580);
+            this.ptbhistory.Name = "ptbhistory";
+            this.ptbhistory.Size = new System.Drawing.Size(47, 43);
+            this.ptbhistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbhistory.TabIndex = 12;
+            this.ptbhistory.TabStop = false;
+            this.ptbhistory.Click += new System.EventHandler(this.ptbhistory_Click);
+            // 
+            // lbhistory
+            // 
+            this.lbhistory.AutoSize = true;
+            this.lbhistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.lbhistory.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhistory.Location = new System.Drawing.Point(56, 580);
+            this.lbhistory.Name = "lbhistory";
+            this.lbhistory.Size = new System.Drawing.Size(135, 42);
+            this.lbhistory.TabIndex = 11;
+            this.lbhistory.Text = "Lịch sử";
+            this.lbhistory.Click += new System.EventHandler(this.lbhistory_Click);
             // 
             // pnDM
             // 
@@ -154,6 +179,71 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Ballad";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // ptDM
+            // 
+            this.ptDM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptDM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.ptDM.Image = ((System.Drawing.Image)(resources.GetObject("ptDM.Image")));
+            this.ptDM.Location = new System.Drawing.Point(95, 726);
+            this.ptDM.Name = "ptDM";
+            this.ptDM.Size = new System.Drawing.Size(37, 34);
+            this.ptDM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptDM.TabIndex = 9;
+            this.ptDM.TabStop = false;
+            this.ptDM.Visible = false;
+            // 
+            // ptHDM
+            // 
+            this.ptHDM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptHDM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ptHDM.Image = ((System.Drawing.Image)(resources.GetObject("ptHDM.Image")));
+            this.ptHDM.Location = new System.Drawing.Point(12, 691);
+            this.ptHDM.Name = "ptHDM";
+            this.ptHDM.Size = new System.Drawing.Size(47, 43);
+            this.ptHDM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptHDM.TabIndex = 9;
+            this.ptHDM.TabStop = false;
+            this.ptHDM.Click += new System.EventHandler(this.ptHDM_Click);
+            // 
+            // ptLove
+            // 
+            this.ptLove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptLove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ptLove.Image = ((System.Drawing.Image)(resources.GetObject("ptLove.Image")));
+            this.ptLove.Location = new System.Drawing.Point(12, 453);
+            this.ptLove.Name = "ptLove";
+            this.ptLove.Size = new System.Drawing.Size(47, 43);
+            this.ptLove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptLove.TabIndex = 9;
+            this.ptLove.TabStop = false;
+            this.ptLove.Click += new System.EventHandler(this.ptLove_Click);
+            // 
+            // ptPlay
+            // 
+            this.ptPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ptPlay.Image = ((System.Drawing.Image)(resources.GetObject("ptPlay.Image")));
+            this.ptPlay.Location = new System.Drawing.Point(12, 331);
+            this.ptPlay.Name = "ptPlay";
+            this.ptPlay.Size = new System.Drawing.Size(47, 43);
+            this.ptPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptPlay.TabIndex = 9;
+            this.ptPlay.TabStop = false;
+            this.ptPlay.Click += new System.EventHandler(this.ptPlay_Click);
+            // 
+            // ptHome
+            // 
+            this.ptHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ptHome.Image = ((System.Drawing.Image)(resources.GetObject("ptHome.Image")));
+            this.ptHome.Location = new System.Drawing.Point(12, 218);
+            this.ptHome.Name = "ptHome";
+            this.ptHome.Size = new System.Drawing.Size(47, 43);
+            this.ptHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptHome.TabIndex = 9;
+            this.ptHome.TabStop = false;
+            this.ptHome.Click += new System.EventHandler(this.ptHome_Click);
             // 
             // label4
             // 
@@ -236,6 +326,50 @@
             this.panel2.Size = new System.Drawing.Size(903, 97);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(-67, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(129, 27);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(465, 27);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
+            // 
+            // ptbA
+            // 
+            this.ptbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbA.Image = ((System.Drawing.Image)(resources.GetObject("ptbA.Image")));
+            this.ptbA.Location = new System.Drawing.Point(673, 27);
+            this.ptbA.Name = "ptbA";
+            this.ptbA.Size = new System.Drawing.Size(47, 44);
+            this.ptbA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbA.TabIndex = 7;
+            this.ptbA.TabStop = false;
+            // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -284,6 +418,17 @@
             this.lbA.TabIndex = 6;
             this.lbA.Text = "Tài khoản";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(569, 29);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
             // txtB
             // 
             this.txtB.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -304,151 +449,6 @@
             this.pnContainer.Size = new System.Drawing.Size(903, 701);
             this.pnContainer.TabIndex = 2;
             // 
-            // lbhistory
-            // 
-            this.lbhistory.AutoSize = true;
-            this.lbhistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.lbhistory.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhistory.Location = new System.Drawing.Point(56, 580);
-            this.lbhistory.Name = "lbhistory";
-            this.lbhistory.Size = new System.Drawing.Size(135, 42);
-            this.lbhistory.TabIndex = 11;
-            this.lbhistory.Text = "Lịch sử";
-            this.lbhistory.Click += new System.EventHandler(this.lbhistory_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(-67, 27);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(47, 44);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(129, 27);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(47, 44);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(465, 27);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(47, 44);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            // 
-            // ptbA
-            // 
-            this.ptbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbA.Image = ((System.Drawing.Image)(resources.GetObject("ptbA.Image")));
-            this.ptbA.Location = new System.Drawing.Point(673, 27);
-            this.ptbA.Name = "ptbA";
-            this.ptbA.Size = new System.Drawing.Size(47, 44);
-            this.ptbA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbA.TabIndex = 7;
-            this.ptbA.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(569, 29);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 41);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // ptbhistory
-            // 
-            this.ptbhistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbhistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ptbhistory.Image = ((System.Drawing.Image)(resources.GetObject("ptbhistory.Image")));
-            this.ptbhistory.Location = new System.Drawing.Point(12, 580);
-            this.ptbhistory.Name = "ptbhistory";
-            this.ptbhistory.Size = new System.Drawing.Size(47, 43);
-            this.ptbhistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbhistory.TabIndex = 12;
-            this.ptbhistory.TabStop = false;
-            this.ptbhistory.Click += new System.EventHandler(this.ptbhistory_Click);
-            // 
-            // ptDM
-            // 
-            this.ptDM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptDM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.ptDM.Image = ((System.Drawing.Image)(resources.GetObject("ptDM.Image")));
-            this.ptDM.Location = new System.Drawing.Point(95, 726);
-            this.ptDM.Name = "ptDM";
-            this.ptDM.Size = new System.Drawing.Size(37, 34);
-            this.ptDM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptDM.TabIndex = 9;
-            this.ptDM.TabStop = false;
-            this.ptDM.Visible = false;
-            // 
-            // ptHDM
-            // 
-            this.ptHDM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptHDM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ptHDM.Image = ((System.Drawing.Image)(resources.GetObject("ptHDM.Image")));
-            this.ptHDM.Location = new System.Drawing.Point(12, 691);
-            this.ptHDM.Name = "ptHDM";
-            this.ptHDM.Size = new System.Drawing.Size(47, 43);
-            this.ptHDM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptHDM.TabIndex = 9;
-            this.ptHDM.TabStop = false;
-            this.ptHDM.Click += new System.EventHandler(this.ptHDM_Click);
-            // 
-            // ptLove
-            // 
-            this.ptLove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptLove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ptLove.Image = ((System.Drawing.Image)(resources.GetObject("ptLove.Image")));
-            this.ptLove.Location = new System.Drawing.Point(12, 453);
-            this.ptLove.Name = "ptLove";
-            this.ptLove.Size = new System.Drawing.Size(47, 43);
-            this.ptLove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptLove.TabIndex = 9;
-            this.ptLove.TabStop = false;
-            this.ptLove.Click += new System.EventHandler(this.ptLove_Click);
-            // 
-            // ptPlay
-            // 
-            this.ptPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ptPlay.Image = ((System.Drawing.Image)(resources.GetObject("ptPlay.Image")));
-            this.ptPlay.Location = new System.Drawing.Point(12, 331);
-            this.ptPlay.Name = "ptPlay";
-            this.ptPlay.Size = new System.Drawing.Size(47, 43);
-            this.ptPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptPlay.TabIndex = 9;
-            this.ptPlay.TabStop = false;
-            this.ptPlay.Click += new System.EventHandler(this.ptPlay_Click);
-            // 
-            // ptHome
-            // 
-            this.ptHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ptHome.Image = ((System.Drawing.Image)(resources.GetObject("ptHome.Image")));
-            this.ptHome.Location = new System.Drawing.Point(12, 218);
-            this.ptHome.Name = "ptHome";
-            this.ptHome.Size = new System.Drawing.Size(47, 43);
-            this.ptHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptHome.TabIndex = 9;
-            this.ptHome.TabStop = false;
-            this.ptHome.Click += new System.EventHandler(this.ptHome_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -462,8 +462,14 @@
             this.Text = "Music";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbhistory)).EndInit();
             this.pnDM.ResumeLayout(false);
             this.pnDM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptLove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHome)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -471,12 +477,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbhistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptDM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptHDM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptLove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptPlay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptHome)).EndInit();
             this.ResumeLayout(false);
 
         }

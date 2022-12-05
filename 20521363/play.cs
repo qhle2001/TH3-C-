@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static _20521363.Main;
 
 namespace _20521363
 {
@@ -21,6 +22,7 @@ namespace _20521363
             this.StartPosition = FormStartPosition.CenterScreen;
         }
         List<Music> play_;
+        class_history_music history_play;
         public play(List<Music> musicin): this()
         {
             play_ = musicin;
@@ -50,6 +52,8 @@ namespace _20521363
         private void btplay_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
+            history_play = new class_history_music(play_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
+            history_music_play.Add(history_play);
             btplay.Visible = false;
             btstop.Visible = true;
             btpause.Visible = true;
@@ -67,6 +71,7 @@ namespace _20521363
                 lb_lyrics.Text = play_[listBox1.SelectedIndex].Lyrics;
                 lb_name.Text = play_[listBox1.SelectedIndex].Name + " - " + play_[listBox1.SelectedIndex].Singer;
                 timer1.Start();
+                
             }
         }
 
@@ -127,6 +132,8 @@ namespace _20521363
                 lb_lyrics.Text = play_[listBox1.SelectedIndex].Lyrics;
                 lb_name.Text = play_[listBox1.SelectedIndex].Name + " - " + play_[listBox1.SelectedIndex].Singer;
                 timer1.Start();
+                history_play = new class_history_music(play_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
+                history_music_play.Add(history_play);
             }
         }
 
