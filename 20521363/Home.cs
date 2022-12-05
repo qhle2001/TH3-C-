@@ -27,6 +27,40 @@ namespace _20521363
             text_out = text;
             choose_list_music();
         }
+
+        public List<int> quantity_play_of_1_song = new List<int>();
+        public List<string> name_song = new List<string>();
+
+        private void load_fpn(Music music_load)
+        {
+            Label lbl = new Label();
+            lbl.Text = music_load.Name;
+            lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
+            lbl.AutoSize = true;
+            lbl.Location = new Point(90, 20);
+
+            Label lbl2 = new Label();
+            lbl2.Text = music_load.Singer;
+            lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
+            lbl2.AutoSize = true;
+            lbl2.Location = new Point(90, 45);
+
+            PictureBox ptb = new PictureBox();
+            ptb.Tag = music_load.Name;
+            ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb.Size = new Size(70, 70);
+            ptb.Image = music_load.Image;
+            ptb.Location = new Point(10, 10);
+
+            Panel pn = new Panel();
+            pn.Size = new Size(400, 90);
+            pn.Controls.Add(ptb);
+            pn.Controls.Add(lbl);
+            pn.Controls.Add(lbl2);
+            fpn.Controls.Add(pn);
+            play_music.Add(music_load);
+            ptb.Click += new EventHandler(ptb_click);
+        }
         private void show_list_music_homeand_love()
         {
             play_music = new List<Music>();
@@ -49,56 +83,36 @@ namespace _20521363
                             fpn.Controls.Add(pn_type);
                         }
                     }
-                    Label lbl = new Label();
-                    lbl.Text = musicout[i].Name;
-                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                    lbl.AutoSize = true;
-                    lbl.Location = new Point(90, 20);
-
-                    Label lbl2 = new Label();
-                    lbl2.Text = musicout[i].Singer;
-                    lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
-                    lbl2.AutoSize = true;
-                    lbl2.Location = new Point(90, 45);
-
-                    PictureBox ptb = new PictureBox();
-                    ptb.Tag = musicout[i].Name;
-                    ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ptb.Size = new Size(70, 70);
-                    ptb.Image = musicout[i].Image;
-                    ptb.Location = new Point(10, 10);
-
-                    Panel pn = new Panel();
-                    pn.Size = new Size(400, 90);
-                    pn.Controls.Add(ptb);
-                    pn.Controls.Add(lbl);
-                    pn.Controls.Add(lbl2);
-                    fpn.Controls.Add(pn);
-                    play_music.Add(musicout[i]);
-                    ptb.Click += new EventHandler(ptb_click);
+                    load_fpn(musicout[i]);
                 }
             }
             if (text_out == "Lịch sử")
             {
-                for (int i = 0; i < history_music_play.Count; i++)
+                for (int i = 0; i < musicout.Count; i++)
                 {
-                    Label lbl = new Label();
-                    lbl.Text = history_music_play[i].Name;
-                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                    lbl.AutoSize = true;
-                    lbl.Location = new Point(90, 20);
-
-                    Label lbl2 = new Label();
-                    lbl2.Text = history_music_play[i].Date;
-                    lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
-                    lbl2.AutoSize = true;
-                    lbl2.Location = new Point(90, 45);
-
-                    Panel pn = new Panel();
-                    pn.Size = new Size(400, 90);
-                    pn.Controls.Add(lbl);
-                    pn.Controls.Add(lbl2);
-                    fpn.Controls.Add(pn);
+                    int count = 0;
+                    for (int j = 0; j < history_music_play.Count; j++)
+                    {
+                        if (musicout[i].Name == history_music_play[j].Name)
+                        {
+                            count++;
+                        }
+                    }
+                    if (count != 0)
+                    {
+                        quantity_play_of_1_song.Add(count);
+                        name_song.Add(musicout[i].Name);
+                    }
+                }
+                for (int i = 0; i < name_song.Count; i++)
+                {
+                    for (int j = 0; j < musicout.Count; j++)
+                    {
+                        if (musicout[j].Name == name_song[i])
+                        {
+                            load_fpn(musicout[j]);
+                        }
+                    }
                 }
             }
         }
@@ -126,33 +140,7 @@ namespace _20521363
               
                 if (count == split_a.Length)
                 {
-                    Label lbl = new Label();
-                    lbl.Text = musicout[i].Name;
-                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                    lbl.AutoSize = true;
-                    lbl.Location = new Point(90, 20);
-
-                    Label lbl2 = new Label();
-                    lbl2.Text = musicout[i].Singer;
-                    lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
-                    lbl2.AutoSize = true;
-                    lbl2.Location = new Point(90, 45);
-
-                    PictureBox ptb = new PictureBox();
-                    ptb.Tag = musicout[i].Name;
-                    ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ptb.Size = new Size(70, 70);
-                    ptb.Image = musicout[i].Image;
-                    ptb.Location = new Point(10, 10);
-
-                    Panel pn = new Panel();
-                    pn.Size = new Size(400, 90);
-                    pn.Controls.Add(ptb);
-                    pn.Controls.Add(lbl);
-                    pn.Controls.Add(lbl2);
-                    fpn.Controls.Add(pn);
-                    play_music.Add(musicout[i]);
-                    ptb.Click += new EventHandler(ptb_click);
+                    load_fpn(musicout[i]);
                 }
             }
         }
