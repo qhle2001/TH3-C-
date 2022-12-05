@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{336F0FD3-5970-46E0-B84C-98F8BDC22CBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_20521363</RootNamespace>
+    <AssemblyName>20521363</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_song_in_playlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_song_in_playlist.Designer.cs">
+      <DependentUpon>add_song_in_playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="find_user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="find_user.Designer.cs">
+      <DependentUpon>find_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_playlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_playlist.Designer.cs">
+      <DependentUpon>add_playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_add_playlist_of_user_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_add_playlist_of_user_information.Designer.cs">
+      <DependentUpon>form_add_playlist_of_user_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_download.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_download.Designer.cs">
+      <DependentUpon>form_download.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\class_playlist.cs" />
+    <Compile Include="Model\Music.cs" />
+    <Compile Include="play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="play.Designer.cs">
+      <DependentUpon>play.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user_playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_playlist.Designer.cs">
+      <DependentUpon>user_playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_of_find_detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_of_find_detail.Designer.cs">
+      <DependentUpon>user_of_find_detail.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_song_in_playlist.resx">
+      <DependentUpon>add_song_in_playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="find_user.resx">
+      <DependentUpon>find_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_playlist.resx">
+      <DependentUpon>add_playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_add_playlist_of_user_information.resx">
+      <DependentUpon>form_add_playlist_of_user_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_download.resx">
+      <DependentUpon>form_download.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="play.resx">
+      <DependentUpon>play.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="user_playlist.resx">
+      <DependentUpon>user_playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_of_find_detail.resx">
+      <DependentUpon>user_of_find_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Despacito.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Let Me Down Slowly.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cheap thrills.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dance Monkey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peaches.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lily.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reality.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Let Me Love You.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Counting Stars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senbonzakura.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anh chẳng thể.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chuyện đôi ta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thức giấc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tình yêu màu hồng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nơi đây anh chờ em.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thương thầm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chẳng thể tìm được em.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cô ấy nói.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Đường tôi chở em về.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I Realy Like You.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I Dare You.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I Don%27t Care.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Believer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beautiful People.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\We don%27t talk anymore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Havana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perfect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\On My Way.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Memories.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tự dưng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Người thế thay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lời chúc không thật.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xin đừng lặng im.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Đau trong quá khứ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anh sẽ ổn thôi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nếu không là mãi mãi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sự thật sau một lời hứa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Người ấy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiều hôm ấy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Despacito1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Họ yêu ai mất rồi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643770_favorite_heart_like_likes_love_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\299063_heart_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665236_circle_play_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665214_circle_pause_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352073_circle_fill_play_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\640px-Beats_Music_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564491_add_create_new_plus_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
