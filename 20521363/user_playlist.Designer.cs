@@ -49,17 +49,17 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 35);
+            this.label1.Size = new System.Drawing.Size(108, 35);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Danh sách bài hát";
+            this.label1.Text = "Playlist";
             // 
             // btadd
             // 
             this.btadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btadd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btadd.Location = new System.Drawing.Point(35, 3);
+            this.btadd.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btadd.Location = new System.Drawing.Point(353, 2);
             this.btadd.Name = "btadd";
-            this.btadd.Size = new System.Drawing.Size(154, 45);
+            this.btadd.Size = new System.Drawing.Size(221, 45);
             this.btadd.TabIndex = 3;
             this.btadd.Text = "Thêm Playlist";
             this.btadd.UseVisualStyleBackColor = true;
@@ -68,10 +68,10 @@
             // btremove
             // 
             this.btremove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btremove.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btremove.Location = new System.Drawing.Point(354, 5);
+            this.btremove.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btremove.Location = new System.Drawing.Point(593, 2);
             this.btremove.Name = "btremove";
-            this.btremove.Size = new System.Drawing.Size(155, 45);
+            this.btremove.Size = new System.Drawing.Size(222, 45);
             this.btremove.TabIndex = 4;
             this.btremove.Text = "Xóa Playlist";
             this.btremove.UseVisualStyleBackColor = true;
@@ -142,10 +142,10 @@
             // btplay
             // 
             this.btplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btplay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btplay.Location = new System.Drawing.Point(600, 3);
+            this.btplay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btplay.Location = new System.Drawing.Point(830, 2);
             this.btplay.Name = "btplay";
-            this.btplay.Size = new System.Drawing.Size(155, 45);
+            this.btplay.Size = new System.Drawing.Size(222, 45);
             this.btplay.TabIndex = 5;
             this.btplay.Text = "Phát nhạc";
             this.btplay.UseVisualStyleBackColor = true;

@@ -60,7 +60,6 @@ namespace _20521363
             }
             listView1.Font = new Font("Time New Roman", 16, FontStyle.Bold);
         }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -86,7 +85,7 @@ namespace _20521363
             }
         }
 
-        List<Music> play_playlist;
+        public List<Music> play_playlist;
 
         private void btplay_Click(object sender, EventArgs e)
         {
@@ -117,11 +116,13 @@ namespace _20521363
             }
             else
             {
-                MessageBox.Show("Playlist rỗng", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Playlist rỗng!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        List<Music> play_for_formplay;
+        public class_playlist temp_play;
+        public string choose_playlist, name_song_remove;
+        public int index_song_remove;
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             play_playlist = new List<Music>();
@@ -142,14 +143,28 @@ namespace _20521363
                             }
                         }
                     }
+                    index_song_remove = listBox1.SelectedIndex;
+                    temp_play = new class_playlist(listView1.Items[i].Text, play_playlist[listBox1.SelectedIndex].Name);
+                    form_remove_song_in_playlist newform = new form_remove_song_in_playlist(this);
+                    newform.ShowDialog();
                 }
             }
-            if ( listBox1.SelectedIndex != -1)
+        }
+        internal void upload_listbox()
+        {
+            listBox1.Items.Clear();
+            for (int j = 0; j < name_song_in_playlist.Count; j++)
             {
-                play_for_formplay = new List<Music>();
-                play_for_formplay.Add(play_playlist[listBox1.SelectedIndex]);
-                play newform = new play(play_for_formplay);
-                newform.ShowDialog();
+                if (name_song_in_playlist[j].Name_playlist == temp_play.Name_playlist)
+                {
+                    for (int z = 0; z < music.Count; z++)
+                    {
+                        if (music[z].Name == name_song_in_playlist[j].Name_song)
+                        {
+                            listBox1.Items.Add(music[z].Name);
+                        }
+                    }
+                }
             }
         }
     }

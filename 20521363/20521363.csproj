@@ -76,6 +76,12 @@
     <Compile Include="form_download.Designer.cs">
       <DependentUpon>form_download.cs</DependentUpon>
     </Compile>
+    <Compile Include="form_remove_song_in_playlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_remove_song_in_playlist.Designer.cs">
+      <DependentUpon>form_remove_song_in_playlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_download.resx">
       <DependentUpon>form_download.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_remove_song_in_playlist.resx">
+      <DependentUpon>form_remove_song_in_playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

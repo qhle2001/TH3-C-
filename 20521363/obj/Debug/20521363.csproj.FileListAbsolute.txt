@@ -24,3 +24,4 @@ C:\Users\DELL\OneDrive\Documents\C#\Bài thực hành 3\20521363\20521363\obj\De
 C:\Users\DELL\OneDrive\Documents\C#\Bài thực hành 3\20521363\20521363\obj\Debug\_20521363.form_add_pl.resources
 C:\Users\DELL\OneDrive\Documents\C#\Bài thực hành 3\20521363\20521363\obj\Debug\_20521363.add_song_in_playlist.resources
 C:\Users\DELL\OneDrive\Documents\C#\Bài thực hành 3\20521363\20521363\obj\Debug\_20521363.form_add_playlist_of_user_information.resources
+C:\Users\DELL\OneDrive\Documents\C#\Bài thực hành 3\20521363\20521363\obj\Debug\_20521363.form_remove_song_in_playlist.resources
