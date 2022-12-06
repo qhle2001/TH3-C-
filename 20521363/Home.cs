@@ -28,8 +28,8 @@ namespace _20521363
             choose_list_music();
         }
 
-        public List<int> quantity_play_of_1_song = new List<int>();
-        public List<string> name_song = new List<string>();
+        public List<int> quantity_play_of_1_song;
+        public List<string> name_song;
 
         private void load_fpn(Music music_load)
         {
@@ -88,20 +88,31 @@ namespace _20521363
             }
             if (text_out == "Lịch sử")
             {
-                for (int i = 0; i < musicout.Count; i++)
+                quantity_play_of_1_song = new List<int>();
+                name_song = new List<string>();
+                for (int i = 0; i < history_music_play.Count; i++)
                 {
-                    int count = 0;
-                    for (int j = 0; j < history_music_play.Count; j++)
+                    bool flag = false;
+                    for (int check = 0; check < i; check++)
                     {
-                        if (musicout[i].Name == history_music_play[j].Name)
+                        if (history_music_play[i].Name == history_music_play[check].Name)
                         {
-                            count++;
+                            flag = true;
+                            break;
                         }
                     }
-                    if (count != 0)
+                    if (flag == false)
                     {
+                        int count = 1;
+                        for (int j = i + 1; j < history_music_play.Count; j++)
+                        {
+                            if (history_music_play[i].Name == history_music_play[j].Name)
+                            {
+                                count++;
+                            }
+                        }
                         quantity_play_of_1_song.Add(count);
-                        name_song.Add(musicout[i].Name);
+                        name_song.Add(history_music_play[i].Name);
                     }
                 }
                 for (int i = 0; i < name_song.Count; i++)
@@ -164,22 +175,38 @@ namespace _20521363
                 if (musicout[i].Name == ((PictureBox)sender).Tag)
                 {
                     music_out = musicout[i];
-                    Information newform = new Information(this);
-                    newform.ShowDialog();
+                    if (text_out != "Lịch sử")
+                    {
+                        Information newform = new Information(this);
+                        newform.ShowDialog();
+                    }
+                    else
+                    {
+                        information_for_history newform = new information_for_history(this);
+                        newform.ShowDialog();
+                    }
                 }
             }
         }
         internal void load_list_love()
         {
-            for ( int i = 0; i < musicout.Count; i++)
+            if (text_out == "Lịch sử")
             {
-                if (musicout[i].Name == music_out.Name)
-                {
-                    musicout.Remove(musicout[i]);
-                }
+                fpn.Controls.Clear();
+                show_list_music_homeand_love();
             }
-            fpn.Controls.Clear();
-            show_list_music_homeand_love();
+            else
+            {
+                for (int i = 0; i < musicout.Count; i++)
+                {
+                    if (musicout[i].Name == music_out.Name)
+                    {
+                        musicout.Remove(musicout[i]);
+                    }
+                }
+                fpn.Controls.Clear();
+                show_list_music_homeand_love();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

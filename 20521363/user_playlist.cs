@@ -37,6 +37,7 @@ namespace _20521363
                     _playlist.RemoveAt(i);
                     name_song_in_playlist.Clear();
                     i--;
+                    label1.Text = "Playlist ";
                 }
             }
         }

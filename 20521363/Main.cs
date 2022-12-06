@@ -165,7 +165,6 @@ namespace _20521363
             ptbhistory.BackColor = Color.FromArgb(224, 238, 238);
             Home uc = new Home(music, label1.Text);
             addUserControl(uc);
-            lb_trademark.Text = DateTime.Now.ToString();
 
         }
 

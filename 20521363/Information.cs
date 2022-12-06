@@ -16,15 +16,12 @@ namespace _20521363
     public partial class Information : Form
     {
         bool love = true;
-        public Information()
+        Home formout;
+        string text;
+        public Information(Home ucin)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-        Home formout;
-        string text;
-        public Information(Home ucin): this()
-        {
             formout = ucin;
             text = ucin.text_out;
             pictureBox1.Image = ucin.music_out.Image;
@@ -67,18 +64,6 @@ namespace _20521363
         {
             List<Music> music_play = new List<Music>();
             music_play.Add(formout.music_out);
-            bool flag = true;
-            for (int i = 0; i < history_music.Count; i++)
-            {
-                if (history_music[i].Name == formout.music_out.Name)
-                {
-                    flag = false;
-                }
-            }
-            if (flag == true)
-            {
-                history_music.Add(formout.music_out);
-            }
             play formplay = new play(music_play);
             formplay.ShowDialog();
         }
