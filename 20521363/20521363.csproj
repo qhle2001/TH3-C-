@@ -354,5 +354,14 @@
   <ItemGroup>
     <None Include="Resources\1564491_add_create_new_plus_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phải_chi_lúc_trước_anh_sai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singer.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

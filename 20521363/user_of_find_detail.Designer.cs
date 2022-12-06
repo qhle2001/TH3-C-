@@ -34,10 +34,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1072, 663);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(982, 626);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // user_of_find_detail

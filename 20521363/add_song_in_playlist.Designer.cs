@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 406);
+            this.panel1.Size = new System.Drawing.Size(528, 406);
             this.panel1.TabIndex = 0;
             // 
             // listView1
@@ -56,7 +56,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(508, 406);
+            this.listView1.Size = new System.Drawing.Size(528, 406);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -66,7 +66,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Location = new System.Drawing.Point(508, 35);
+            this.panel2.Location = new System.Drawing.Point(530, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(296, 461);
             this.panel2.TabIndex = 1;
@@ -87,7 +87,7 @@
             // 
             this.lb_danhsach.AutoSize = true;
             this.lb_danhsach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_danhsach.Location = new System.Drawing.Point(512, 7);
+            this.lb_danhsach.Location = new System.Drawing.Point(534, 9);
             this.lb_danhsach.Name = "lb_danhsach";
             this.lb_danhsach.Size = new System.Drawing.Size(72, 23);
             this.lb_danhsach.TabIndex = 2;
@@ -107,7 +107,7 @@
             // bt_add_to_playlist
             // 
             this.bt_add_to_playlist.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_add_to_playlist.Location = new System.Drawing.Point(155, 409);
+            this.bt_add_to_playlist.Location = new System.Drawing.Point(167, 409);
             this.bt_add_to_playlist.Name = "bt_add_to_playlist";
             this.bt_add_to_playlist.Size = new System.Drawing.Size(193, 38);
             this.bt_add_to_playlist.TabIndex = 4;
@@ -118,7 +118,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(357, 409);
+            this.button1.Location = new System.Drawing.Point(380, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 38);
             this.button1.TabIndex = 5;
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(830, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bt_add_to_playlist);
             this.Controls.Add(this.bt_add_playlist);
@@ -141,7 +141,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "add_song_in_playlist";
-            this.Text = "add_song_in_playlist";
+            this.Text = "Playlist";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

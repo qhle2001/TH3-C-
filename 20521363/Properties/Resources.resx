@@ -124,20 +124,20 @@
   <data name="Havana" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Havana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Anh chẳng thể" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Anh chẳng thể.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="I Realy Like You" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I Realy Like You.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3643770_favorite_heart_like_likes_love_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3643770_favorite_heart_like_likes_love_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="On My Way" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\On My Way.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Người ấy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Người ấy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Đau trong quá khứ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Đau trong quá khứ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Perfect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Perfect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dance Monkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dance Monkey.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,17 +148,14 @@
   <data name="We don't talk anymore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\We don't talk anymore.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Reality" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Reality.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="8665214_circle_pause_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8665214_circle_pause_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Đường tôi chở em về" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Đường tôi chở em về.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="640px-Beats_Music_logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\640px-Beats_Music_logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sự thật sau một lời hứa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sự thật sau một lời hứa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Anh sẽ ổn thôi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Anh sẽ ổn thôi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +163,17 @@
   <data name="I Dare You" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I Dare You.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Let Me Down Slowly" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Let Me Down Slowly.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1564491_add_create_new_plus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1564491_add_create_new_plus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Thức giấc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thức giấc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Xin đừng lặng im" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Xin đừng lặng im.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Peaches" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Peaches.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Despacito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Despacito.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,17 +187,14 @@
   <data name="I Don't Care" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I Don't Care.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Họ yêu ai mất rồi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Họ yêu ai mất rồi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Phải_chi_lúc_trước_anh_sai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phải_chi_lúc_trước_anh_sai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cheap thrills" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cheap thrills.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Believer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Believer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tình yêu màu hồng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tình yêu màu hồng.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chuyện đôi ta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chuyện đôi ta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +205,11 @@
   <data name="Cô ấy nói" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cô ấy nói.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Thức giấc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thức giấc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Let Me Love You" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Let Me Love You.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Memories" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Memories.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="352073_circle_fill_play_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352073_circle_fill_play_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +217,11 @@
   <data name="Người thế thay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Người thế thay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Peaches" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Peaches.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Let Me Down Slowly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Let Me Down Slowly.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lời chúc không thật" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lời chúc không thật.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="640px-Beats_Music_logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\640px-Beats_Music_logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="299063_heart_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\299063_heart_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,26 +229,29 @@
   <data name="Chiều hôm ấy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chiều hôm ấy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sự thật sau một lời hứa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sự thật sau một lời hứa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Anh chẳng thể" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anh chẳng thể.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Senbonzakura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Senbonzakura.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Let Me Love You" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Let Me Love You.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reality" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reality.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Người ấy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Người ấy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Họ yêu ai mất rồi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Họ yêu ai mất rồi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Nơi đây anh chờ em" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nơi đây anh chờ em.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="On My Way" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\On My Way.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Perfect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Perfect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Memories" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Memories.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="compose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lời chúc không thật" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lời chúc không thật.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Counting Stars" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Counting Stars.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,13 +259,16 @@
   <data name="Nếu không là mãi mãi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nếu không là mãi mãi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lily" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lily.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Tự dưng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tự dưng.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1564491_add_create_new_plus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1564491_add_create_new_plus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lily" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lily.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tình yêu màu hồng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tình yêu màu hồng.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="singer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\singer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

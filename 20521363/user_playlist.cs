@@ -35,7 +35,14 @@ namespace _20521363
                 {
                     listView1.Items[i].Remove();
                     _playlist.RemoveAt(i);
-                    name_song_in_playlist.Clear();
+                    for (int j = 0; j < name_song_in_playlist.Count; j++)
+                    {
+                        if (name_song_in_playlist[i].Name_playlist == listView1.Items[i].Text)
+                        {
+                            name_song_in_playlist.RemoveAt(j);
+                            j--;
+                        }
+                    }
                     i--;
                     label1.Text = "Playlist ";
                 }

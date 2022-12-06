@@ -228,7 +228,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(983, 661);
+            this.ClientSize = new System.Drawing.Size(983, 634);
             this.Controls.Add(this.btdelete);
             this.Controls.Add(this.lstShow);
             this.Controls.Add(this.label7);
@@ -246,8 +246,10 @@
             this.Controls.Add(this.lbst);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "information_for_history";
-            this.Text = "information_for_history";
+            this.Text = "Detail";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

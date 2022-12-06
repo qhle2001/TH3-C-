@@ -61,7 +61,7 @@
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(221, 45);
             this.btadd.TabIndex = 3;
-            this.btadd.Text = "Thêm Playlist";
+            this.btadd.Text = "Tạo Playlist";
             this.btadd.UseVisualStyleBackColor = true;
             this.btadd.Click += new System.EventHandler(this.btadd_Click);
             // 

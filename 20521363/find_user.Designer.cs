@@ -34,7 +34,7 @@
             this.nghệSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lờiBàiHátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pncontainer_result = new System.Windows.Forms.Panel();
+            this.fpn = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,8 +79,8 @@
             // caSĩToolStripMenuItem
             // 
             this.caSĩToolStripMenuItem.Name = "caSĩToolStripMenuItem";
-            this.caSĩToolStripMenuItem.Size = new System.Drawing.Size(123, 39);
-            this.caSĩToolStripMenuItem.Text = "Nghệ sĩ";
+            this.caSĩToolStripMenuItem.Size = new System.Drawing.Size(157, 39);
+            this.caSĩToolStripMenuItem.Text = "Thực hiện";
             this.caSĩToolStripMenuItem.Click += new System.EventHandler(this.caSĩToolStripMenuItem_Click);
             // 
             // lờiBàiHátToolStripMenuItem
@@ -90,19 +90,22 @@
             this.lờiBàiHátToolStripMenuItem.Text = "Lời bài hát";
             this.lờiBàiHátToolStripMenuItem.Click += new System.EventHandler(this.lờiBàiHátToolStripMenuItem_Click);
             // 
-            // pncontainer_result
+            // fpn
             // 
-            this.pncontainer_result.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pncontainer_result.Location = new System.Drawing.Point(0, 43);
-            this.pncontainer_result.Name = "pncontainer_result";
-            this.pncontainer_result.Size = new System.Drawing.Size(1195, 657);
-            this.pncontainer_result.TabIndex = 1;
+            this.fpn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fpn.AutoScroll = true;
+            this.fpn.Location = new System.Drawing.Point(0, 43);
+            this.fpn.Name = "fpn";
+            this.fpn.Size = new System.Drawing.Size(1195, 657);
+            this.fpn.TabIndex = 1;
             // 
             // find_user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pncontainer_result);
+            this.Controls.Add(this.fpn);
             this.Controls.Add(this.menuStrip1);
             this.Name = "find_user";
             this.Size = new System.Drawing.Size(1195, 700);
@@ -121,6 +124,6 @@
         private System.Windows.Forms.ToolStripMenuItem nghệSĩToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem caSĩToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lờiBàiHátToolStripMenuItem;
-        private System.Windows.Forms.Panel pncontainer_result;
+        private System.Windows.Forms.FlowLayoutPanel fpn;
     }
 }

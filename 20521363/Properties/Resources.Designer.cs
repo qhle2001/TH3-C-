@@ -223,6 +223,16 @@ namespace _20521363.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap compose {
+            get {
+                object obj = ResourceManager.GetObject("compose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Counting_Stars {
             get {
                 object obj = ResourceManager.GetObject("Counting Stars", resourceCulture);
@@ -453,6 +463,16 @@ namespace _20521363.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Phải_chi_lúc_trước_anh_sai {
+            get {
+                object obj = ResourceManager.GetObject("Phải_chi_lúc_trước_anh_sai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reality {
             get {
                 object obj = ResourceManager.GetObject("Reality", resourceCulture);
@@ -466,6 +486,16 @@ namespace _20521363.Properties {
         internal static System.Drawing.Bitmap Senbonzakura {
             get {
                 object obj = ResourceManager.GetObject("Senbonzakura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap singer {
+            get {
+                object obj = ResourceManager.GetObject("singer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -227,7 +227,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Information";
-            this.Text = "Information";
+            this.Text = "Detail";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
