@@ -96,9 +96,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fpn.AutoScroll = true;
-            this.fpn.Location = new System.Drawing.Point(0, 43);
+            this.fpn.Location = new System.Drawing.Point(39, 43);
             this.fpn.Name = "fpn";
-            this.fpn.Size = new System.Drawing.Size(1195, 657);
+            this.fpn.Size = new System.Drawing.Size(1156, 657);
             this.fpn.TabIndex = 1;
             // 
             // find_user

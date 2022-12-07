@@ -28,115 +28,107 @@ namespace _20521363
             musicout = musicin;
             textout = text.Trim().ToLower();
             tấtCảToolStripMenuItem.BackColor = Color.FromArgb(0, 178, 238);
-            Panel pn_type = new Panel();
-            Label lbl_type = new Label();
-            lbl_type.Text = "Bài hát -------------------------------------------------------------------------------------------------------------------------------------------------------";
-            lbl_type.AutoSize = true;
-            lbl_type.Font = new Font("Times New Roman", 20, FontStyle.Bold);
-            lbl_type.Location = new Point(1, 10);
-            pn_type.Size = new Size(1200, 50);
-            pn_type.Controls.Add(lbl_type);
-            fpn.Controls.Add(pn_type);
-            load_song();
-            load_author();
+            find_result();
             load_singer();
+            load_author();
             load_lyrics();
         }
         List<Music> music_find;
-        bool flag_author, flag_singer;
-        bool check_author, check_singer;
+        bool check_singer_global = false;
         private void find_result()
         {
+            bool check_author, check_singer;
             music_find = new List<Music>();
             for (int i = 0; i < musicout.Count; i++)
             {
-                #region check character
-                flag_author = false; flag_singer = false;
-                for (int idx_author = 0; idx_author < musicout[i].Author.Length; idx_author++)
-                {
-                    if (musicout[i].Author[idx_author] == ',')
-                    {
-                        flag_author = true; break;
-                    }
-                        
-                }
-                for (int idx_author = 0; idx_author < musicout[i].Singer.Length; idx_author++)
-                {
-                    if (musicout[i].Singer[idx_author] == ',')
-                    {
-                        flag_singer = true; break;
-                    }
-                }
-                #endregion
-                #region check textout in musicout
                 check_author = false; check_singer = false;
-                if (flag_author)
+                string[] temp_author = musicout[i].Author.Split(',');
+                for (int j = 0; j < temp_author.Length; j++)
                 {
-                    string[] temp = musicout[i].Author.Split(',');
-                    for (int j = 0; j < temp.Length; j++)
+                    temp_author[j] = temp_author[j].Trim().ToLower();
+                    if (textout == temp_author[j])
                     {
-                        temp[j] = temp[j].Trim().ToLower();
-                        if (textout == temp[j])
-                        {
-                            check_author = true; break;
-                        }
+                        check_author = true; break;
                     }
                 }
-                else
+                string[] temp_singer = musicout[i].Singer.Split(',');
+                for (int j = 0; j < temp_singer.Length; j++)
                 {
-                    if (textout == musicout[i].Author.Trim().ToLower())
-                    {
-                        check_author = true;
-                    }
-                }
-                if (flag_singer)
-                {
-                    string[] temp = musicout[i].Singer.Split(',');
-                    for (int j = 0; j < temp.Length; j++)
-                    {
-                        temp[j] = temp[j].Trim().ToLower();
-                        if (textout == temp[j])
-                        {
-                            check_singer = true; break;
-                        }
-                    }
-                }
-                else
-                {
-                    if (textout == musicout[i].Singer.Trim().ToLower())
+                    temp_singer[j] = temp_singer[j].Trim().ToLower();
+                    if (textout == temp_singer[j])
                     {
                         check_singer = true;
+                        check_singer_global = true;
+                        break;
                     }
                 }
-                #endregion
                 if (textout == musicout[i].Name.Trim().ToLower() || check_author == true || check_singer == true)
                 {
                     music_find.Add(musicout[i]);
                 }
             }
         }
-        private void load_song()
+        #region load_fpn
+        private void load_category(string text)
         {
-            find_result();
-            for (int i = 0; i < music_find.Count; i++)
+            Panel pn_type = new Panel();
+            Label lbl_type = new Label();
+            lbl_type.Text = text + " -------------------------------------------------------------------------------------------------------------------------------------------------------";
+            lbl_type.AutoSize = true;
+            lbl_type.Font = new Font("Times New Roman", 20, FontStyle.Bold);
+            lbl_type.Location = new Point(1, 10);
+            pn_type.Size = new Size(1200, 50);
+            pn_type.Controls.Add(lbl_type);
+            fpn.Controls.Add(pn_type);
+        }
+
+        private void load_fpn(List<string> type)
+        {
+            for (int i = 0; i < type.Count; i++)
             {
                 Label lbl = new Label();
-                lbl.Text = music_find[i].Name;
+                lbl.Text = type[i];
+                lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
+                lbl.AutoSize = true;
+                lbl.Location = new Point(90, 35);
+
+                PictureBox ptb = new PictureBox();
+                ptb.Tag = type[i];
+                ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptb.Size = new Size(70, 70);
+                ptb.Image = Resources.compose;
+                ptb.Location = new Point(10, 10);
+
+                Panel pn = new Panel();
+                pn.Size = new Size(400, 90);
+                pn.Controls.Add(ptb);
+                pn.Controls.Add(lbl);
+                fpn.Controls.Add(pn);
+            }
+        }
+        #endregion
+        private void load_song(List<Music> songs)
+        {
+            load_category("Bài hát");
+            for (int i = 0; i < songs.Count; i++)
+            {
+                Label lbl = new Label();
+                lbl.Text = songs[i].Name;
                 lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
                 lbl.AutoSize = true;
                 lbl.Location = new Point(90, 20);
 
                 Label lbl2 = new Label();
-                lbl2.Text = music_find[i].Singer;
+                lbl2.Text = songs[i].Singer;
                 lbl2.Font = new Font("Times New Roman", 14, FontStyle.Regular);
                 lbl2.AutoSize = true;
                 lbl2.Location = new Point(90, 45);
 
                 PictureBox ptb = new PictureBox();
-                ptb.Tag = music_find[i].Name;
+                ptb.Tag = songs[i].Name;
                 ptb.SizeMode = PictureBoxSizeMode.StretchImage;
                 ptb.Size = new Size(70, 70);
-                ptb.Image = music_find[i].Image;
+                ptb.Image = songs[i].Image;
                 ptb.Location = new Point(10, 10);
 
                 Panel pn = new Panel();
@@ -149,81 +141,75 @@ namespace _20521363
 
             }
         }
-
+        #region loadauthorsinger
+        private void load_fpn_author(List<string> author)
+        {
+            for (int i = 0; i < music_find.Count; i++)
+            {
+                string[] temp = music_find[i].Author.Split(',');
+                for (int j = 0; j < temp.Length; j++)
+                {
+                    temp[j] = temp[j].Trim();
+                    author.Add(temp[j]);
+                }
+            }
+        }
+        private void load_fpn_singer(List<string> singer)
+        {
+            for (int i = 0; i < music_find.Count; i++)
+            {
+                string[] temp = music_find[i].Singer.Split(',');
+                for (int j = 0; j < temp.Length; j++)
+                {
+                    temp[j] = temp[j].Trim();
+                    singer.Add(temp[j]);
+                }
+            }
+        }
+        #endregion
         private void load_author()
         {
-            Panel pn_type = new Panel();
-            Label lbl_type = new Label();
-            lbl_type.Text = "Sáng tác -------------------------------------------------------------------------------------------------------------------------------------------------------";
-            lbl_type.AutoSize = true;
-            lbl_type.Font = new Font("Times New Roman", 20, FontStyle.Bold);
-            lbl_type.Location = new Point(1, 10);
-            pn_type.Size = new Size(1200, 50);
-            pn_type.Controls.Add(lbl_type);
-            fpn.Controls.Add(pn_type);
+            load_category("Nhạc sĩ");
             if (textout == music_find[0].Name.Trim().ToLower())
             {
                 List<string> author = new List<string>();
-                for (int i = 0; i < music_find.Count; i++)
-                {
-                    bool flag_check_author = false;
-                    for (int idx_author = 0; idx_author < music_find[i].Author.Length; idx_author++)
-                    {
-                        if (music_find[i].Author[idx_author] == ',')
-                        {
-                            flag_check_author = true; break;
-                        }
-                    }
-                    if (flag_check_author)
-                    {
-                        string[] temp = music_find[i].Author.Split(',');
-                        for (int j = 0; j < temp.Length; j++)
-                        {
-                            temp[j] = temp[j].Trim();
-                            author.Add(temp[j]);
-                        }
-                    }
-                    else
-                    {
-                        author.Add(music_find[i].Author);
-                    }
-                }
-                for (int i = 0; i < author.Count; i++)
-                {
-                    Label lbl = new Label();
-                    lbl.Text = author[i];
-                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                    lbl.AutoSize = true;
-                    lbl.Location = new Point(90, 35);
-
-                    PictureBox ptb = new PictureBox();
-                    ptb.Tag = author[i];
-                    ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ptb.Size = new Size(70, 70);
-                    ptb.Image = Resources.compose;
-                    ptb.Location = new Point(10, 10);
-
-                    Panel pn = new Panel();
-                    pn.Size = new Size(400, 90);
-                    pn.Controls.Add(ptb);
-                    pn.Controls.Add(lbl);
-                    fpn.Controls.Add(pn);
-                }
+                load_song(music_find);
+                load_category("Nhạc sĩ");
+                load_fpn_author(author);
+                load_fpn(author);
             }
             else
             {
                 List<string> author = new List<string>();
-                for (int i = 0; i < music_find.Count; i++)
+                List<string> song = new List<string>();
+                if (check_singer_global)
                 {
-                    bool flag_check_author = false;
-                    for (int idx_author = 0; idx_author < music_find[i].Author.Length; idx_author++)
+                    for (int i = 0; i < music_find.Count; i++)
                     {
-                        if (music_find[i].Author[idx_author] == ',')
+                        bool check_singer = false;
+                        string[] temp_singer = music_find[i].Singer.Split(',');
+                        for (int j = 0; j < temp_singer.Length; j++)
                         {
-                            flag_check_author = true; break;
+                            string temp = temp_singer[j].Trim().ToLower();
+                            if (textout == temp)
+                            {
+                                check_singer = true;
+                                break;
+                            }
+                        }
+                        if (check_singer)
+                        {
+                            string[] temp_author = music_find[i].Author.Split(',');
+                            for (int j = 0; j < temp_author.Length; j++)
+                            {
+                                author.Add(temp_author[j].Trim());
+                            }
                         }
                     }
-                    if (flag_check_author)
+                }
+                else
+                {
+                    for (int i = 0; i < music_find.Count; i++)
                     {
                         string[] temp = music_find[i].Author.Split(',');
                         for (int j = 0; j < temp.Length; j++)
@@ -235,14 +221,8 @@ namespace _20521363
                             }
                         }
                     }
-                    else
-                    {
-                        if (textout == music_find[i].Author.Trim().ToLower())
-                        {
-                            author.Add(music_find[i].Author);
-                        }
-                    }
                 }
+                
                 for (int i = 0; i < author.Count - 1; i++)
                 {
                     if (author[i] == author[i + 1])
@@ -253,170 +233,38 @@ namespace _20521363
                 }
                 if (author.Count > 0)
                 {
-                    for (int i = 0; i < author.Count; i++)
-                    {
-                        Label lbl = new Label();
-                        lbl.Text = author[i];
-                        lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                        lbl.AutoSize = true;
-                        lbl.Location = new Point(90, 35);
-
-                        PictureBox ptb = new PictureBox();
-                        ptb.Tag = author[i];
-                        ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                        ptb.Size = new Size(70, 70);
-                        ptb.Image = Resources.compose;
-                        ptb.Location = new Point(10, 10);
-
-                        Panel pn = new Panel();
-                        pn.Size = new Size(400, 90);
-                        pn.Controls.Add(ptb);
-                        pn.Controls.Add(lbl);
-                        fpn.Controls.Add(pn);
-                    }
+                    load_fpn(author);
                 }
                 else
                 {
                     List<string> author_ = new List<string>();
-                    for (int i = 0; i < music_find.Count; i++)
-                    {
-                        bool flag_check_author = false;
-                        for (int idx_author = 0; idx_author < music_find[i].Author.Length; idx_author++)
-                        {
-                            if (music_find[i].Author[idx_author] == ',')
-                            {
-                                flag_check_author = true; break;
-                            }
-                        }
-                        if (flag_check_author)
-                        {
-                            string[] temp = music_find[i].Author.Split(',');
-                            for (int j = 0; j < temp.Length; j++)
-                            {
-                                temp[j] = temp[j].Trim();
-                                author_.Add(temp[j]);
-                            }
-                        }
-                        else
-                        {
-                            author_.Add(music_find[i].Author);
-                        }
-                    }
-                    for (int i = 0; i < author_.Count; i++)
-                    {
-                        Label lbl = new Label();
-                        lbl.Text = author_[i];
-                        lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                        lbl.AutoSize = true;
-                        lbl.Location = new Point(90, 35);
-
-                        PictureBox ptb = new PictureBox();
-                        ptb.Tag = author_[i];
-                        ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                        ptb.Size = new Size(70, 70);
-                        ptb.Image = Resources.compose;
-                        ptb.Location = new Point(10, 10);
-
-                        Panel pn = new Panel();
-                        pn.Size = new Size(400, 90);
-                        pn.Controls.Add(ptb);
-                        pn.Controls.Add(lbl);
-                        fpn.Controls.Add(pn);
-                    }
+                    load_fpn_author(author_);
+                    load_fpn(author_);
                 }
             }
         }
 
         private void load_singer()
         {
-            Panel pn_type = new Panel();
-            Label lbl_type = new Label();
-            lbl_type.Text = "Thực hiện -------------------------------------------------------------------------------------------------------------------------------------------------------";
-            lbl_type.AutoSize = true;
-            lbl_type.Font = new Font("Times New Roman", 20, FontStyle.Bold);
-            lbl_type.Location = new Point(1, 10);
-            pn_type.Size = new Size(1200, 50);
-            pn_type.Controls.Add(lbl_type);
-            fpn.Controls.Add(pn_type);
+            load_category("Thực hiện");
             if (textout == music_find[0].Name.Trim().ToLower())
             {
                 List<string> singer = new List<string>();
-                for (int i = 0; i < music_find.Count; i++)
-                {
-                    bool flag_check_singer = false;
-                    for (int idx_singer = 0; idx_singer < music_find[i].Singer.Length; idx_singer++)
-                    {
-                        if (music_find[i].Singer[idx_singer] == ',')
-                        {
-                            flag_check_singer = true; break;
-                        }
-                    }
-                    if (flag_check_singer)
-                    {
-                        string[] temp = music_find[i].Singer.Split(',');
-                        for (int j = 0; j < temp.Length; j++)
-                        {
-                            temp[j] = temp[j].Trim();
-                            singer.Add(temp[j]);
-                        }
-                    }
-                    else
-                    {
-                        singer.Add(music_find[i].Singer);
-                    }
-                }
-                for (int i = 0; i < singer.Count; i++)
-                {
-                    Label lbl = new Label();
-                    lbl.Text = singer[i];
-                    lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                    lbl.AutoSize = true;
-                    lbl.Location = new Point(90, 35);
-
-                    PictureBox ptb = new PictureBox();
-                    ptb.Tag = singer[i];
-                    ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ptb.Size = new Size(70, 70);
-                    ptb.Image = Resources.singer;
-                    ptb.Location = new Point(10, 10);
-
-                    Panel pn = new Panel();
-                    pn.Size = new Size(400, 90);
-                    pn.Controls.Add(ptb);
-                    pn.Controls.Add(lbl);
-                    fpn.Controls.Add(pn);
-                }
+                load_fpn_singer(singer);
+                load_fpn(singer);
             }
             else
             {
                 List<string> singer = new List<string>();
                 for (int i = 0; i < music_find.Count; i++)
                 {
-                    bool flag_check_singer = false;
-                    for (int idx_singer = 0; idx_singer < music_find[i].Singer.Length; idx_singer++)
+                    string[] temp = music_find[i].Singer.Split(',');
+                    for (int j = 0; j < temp.Length; j++)
                     {
-                        if (music_find[i].Singer[idx_singer] == ',')
+                        string temp_ = temp[j].Trim().ToLower();
+                        if (textout == temp_)
                         {
-                            flag_check_singer = true; break;
-                        }
-                    }
-                    if (flag_check_singer)
-                    {
-                        string[] temp = music_find[i].Singer.Split(',');
-                        for (int j = 0; j < temp.Length; j++)
-                        {
-                            string temp_ = temp[j].Trim().ToLower();
-                            if (textout == temp_)
-                            {
-                                singer.Add(temp[j].Trim());
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (textout == music_find[i].Singer.Trim().ToLower())
-                        {
-                            singer.Add(music_find[i].Singer);
+                            singer.Add(temp[j].Trim());
                         }
                     }
                 }
@@ -430,76 +278,13 @@ namespace _20521363
                 }
                 if (singer.Count > 0)
                 {
-                    for (int i = 0; i < singer.Count; i++)
-                    {
-                        Label lbl = new Label();
-                        lbl.Text = singer[i];
-                        lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                        lbl.AutoSize = true;
-                        lbl.Location = new Point(90, 35);
-
-                        PictureBox ptb = new PictureBox();
-                        ptb.Tag = singer[i];
-                        ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                        ptb.Size = new Size(70, 70);
-                        ptb.Image = Resources.singer;
-                        ptb.Location = new Point(10, 10);
-
-                        Panel pn = new Panel();
-                        pn.Size = new Size(400, 90);
-                        pn.Controls.Add(ptb);
-                        pn.Controls.Add(lbl);
-                        fpn.Controls.Add(pn);
-                    }
+                    load_fpn(singer);
                 }
                 else
                 {
                     List<string> singer_ = new List<string>();
-                    for (int i = 0; i < music_find.Count; i++)
-                    {
-                        bool flag_check_singer = false;
-                        for (int idx_singer = 0; idx_singer < music_find[i].Singer.Length; idx_singer++)
-                        {
-                            if (music_find[i].Singer[idx_singer] == ',')
-                            {
-                                flag_check_singer = true; break;
-                            }
-                        }
-                        if (flag_check_singer)
-                        {
-                            string[] temp = music_find[i].Singer.Split(',');
-                            for (int j = 0; j < temp.Length; j++)
-                            {
-                                temp[j] = temp[j].Trim();
-                                singer_.Add(temp[j]);
-                            }
-                        }
-                        else
-                        {
-                            singer_.Add(music_find[i].Singer);
-                        }
-                    }
-                    for (int i = 0; i < singer_.Count; i++)
-                    {
-                        Label lbl = new Label();
-                        lbl.Text = singer_[i];
-                        lbl.Font = new Font("Times New Roman", 16, FontStyle.Bold);
-                        lbl.AutoSize = true;
-                        lbl.Location = new Point(90, 35);
-
-                        PictureBox ptb = new PictureBox();
-                        ptb.Tag = singer_[i];
-                        ptb.SizeMode = PictureBoxSizeMode.StretchImage;
-                        ptb.Size = new Size(70, 70);
-                        ptb.Image = Resources.singer;
-                        ptb.Location = new Point(10, 10);
-
-                        Panel pn = new Panel();
-                        pn.Size = new Size(400, 90);
-                        pn.Controls.Add(ptb);
-                        pn.Controls.Add(lbl);
-                        fpn.Controls.Add(pn);
-                    }
+                    load_fpn_singer(singer_);
+                    load_fpn(singer_);
                 }
             }
         }
@@ -555,7 +340,6 @@ namespace _20521363
             pn_type.Size = new Size(1200, 50);
             pn_type.Controls.Add(lbl_type);
             fpn.Controls.Add(pn_type);
-            load_song();
         }
 
         private void bàiHátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -566,7 +350,6 @@ namespace _20521363
             caSĩToolStripMenuItem.BackColor = Color.FromArgb(224, 238, 224);
             lờiBàiHátToolStripMenuItem.BackColor = Color.FromArgb(224, 238, 224);
             fpn.Controls.Clear();
-            load_song();
         }
 
         private void nghệSĩToolStripMenuItem_Click(object sender, EventArgs e)
