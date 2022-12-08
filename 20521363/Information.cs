@@ -17,11 +17,29 @@ namespace _20521363
     {
         bool love = true;
         Home formout;
+        Music musicout;
         string text;
+        bool flag_check = false;
+        public Information()
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        public Information(Music musicin): this()
+        {
+            musicout = musicin;
+            pictureBox1.Image = musicout.Image;
+            label1.Text = musicout.Name;
+            lbst.Text = musicout.Singer;
+            label2.Text = musicout.Author;
+            label5.Text = musicout.Type;
+        }
         public Information(Home ucin)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            flag_check = true;
             formout = ucin;
             text = ucin.text_out;
             pictureBox1.Image = ucin.music_out.Image;
@@ -39,10 +57,6 @@ namespace _20521363
                 btdelete.Visible = false;
                 pictureBox2.Visible = true;
             }
-        }
-        private void btadd_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btdelete_Click(object sender, EventArgs e)
@@ -63,7 +77,14 @@ namespace _20521363
         private void btplay_Click(object sender, EventArgs e)
         {
             List<Music> music_play = new List<Music>();
-            music_play.Add(formout.music_out);
+            if (flag_check)
+            {
+                music_play.Add(formout.music_out);
+            }
+            else
+            {
+                music_play.Add(musicout);
+            }
             play formplay = new play(music_play);
             formplay.ShowDialog();
         }
@@ -76,14 +97,31 @@ namespace _20521363
                 bool flag = true;
                 for (int i = 0; i < love_music.Count; i++)
                 {
-                    if (love_music[i].Name == formout.music_out.Name)
+                    if (flag_check)
                     {
-                        flag = false;
+                        if (love_music[i].Name == formout.music_out.Name)
+                        {
+                            flag = false;
+                        }
+                    }
+                    else
+                    {
+                        if (love_music[i].Name == musicout.Name)
+                        {
+                            flag = false;
+                        }
                     }
                 }
-                if (flag == true)
+                if (flag)
                 {
-                    love_music.Add(formout.music_out);
+                    if (flag_check)
+                    {
+                        love_music.Add(formout.music_out);
+                    }
+                    else
+                    {
+                        love_music.Add(musicout);
+                    }
                 }
                 love = false;
             }
@@ -96,19 +134,42 @@ namespace _20521363
 
         private void btLyrics_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(formout.music_out.Lyrics, "Lời bài hát");
+            if (flag_check)
+            {
+                MessageBox.Show(formout.music_out.Lyrics, "Lời bài hát");
+            }
+            else
+            {
+                MessageBox.Show(musicout.Lyrics, "Lời bài hát");
+            }
         }
 
         private void btdownload_Click(object sender, EventArgs e)
         {
-            form_download form = new form_download(formout.music_out.Mp3_4);
-            form.ShowDialog();
+            if (flag_check)
+            {
+                form_download form = new form_download(formout.music_out.Mp3_4);
+                form.ShowDialog();
+            }
+            else
+            {
+                form_download form = new form_download(musicout.Mp3_4);
+                form.ShowDialog();
+            }
         }
 
         private void btadd_playlist_Click(object sender, EventArgs e)
         {
-            add_song_in_playlist newform = new add_song_in_playlist(formout.music_out);
-            newform.ShowDialog();
+            if (flag_check)
+            {
+                add_song_in_playlist newform = new add_song_in_playlist(formout.music_out);
+                newform.ShowDialog();
+            }
+            else
+            {
+                add_song_in_playlist newform = new add_song_in_playlist(musicout);
+                newform.ShowDialog();
+            }
         }
     }
 }
