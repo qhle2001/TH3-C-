@@ -33,18 +33,18 @@ namespace _20521363
             {
                 if (listView1.Items[i].Selected)
                 {
-                    listView1.Items[i].Remove();
-                    _playlist.RemoveAt(i);
                     for (int j = 0; j < name_song_in_playlist.Count; j++)
                     {
-                        if (name_song_in_playlist[i].Name_playlist == listView1.Items[i].Text)
+                        if (name_song_in_playlist[j].Name_playlist == listView1.Items[i].Text)
                         {
                             name_song_in_playlist.RemoveAt(j);
                             j--;
                         }
                     }
-                    i--;
+                    listView1.Items[i].Remove();
+                    _playlist.RemoveAt(i);
                     label1.Text = "Playlist ";
+                    break;
                 }
             }
         }

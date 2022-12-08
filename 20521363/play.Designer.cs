@@ -155,7 +155,7 @@
             // 
             this.lb_volume.AutoSize = true;
             this.lb_volume.ForeColor = System.Drawing.Color.Cyan;
-            this.lb_volume.Location = new System.Drawing.Point(714, 117);
+            this.lb_volume.Location = new System.Drawing.Point(714, 124);
             this.lb_volume.Name = "lb_volume";
             this.lb_volume.Size = new System.Drawing.Size(50, 20);
             this.lb_volume.TabIndex = 8;
