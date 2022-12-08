@@ -35,7 +35,6 @@
             this.caSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lờiBàiHátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fpn = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,8 +72,8 @@
             // nghệSĩToolStripMenuItem
             // 
             this.nghệSĩToolStripMenuItem.Name = "nghệSĩToolStripMenuItem";
-            this.nghệSĩToolStripMenuItem.Size = new System.Drawing.Size(157, 39);
-            this.nghệSĩToolStripMenuItem.Text = "Thực hiện";
+            this.nghệSĩToolStripMenuItem.Size = new System.Drawing.Size(123, 39);
+            this.nghệSĩToolStripMenuItem.Text = "Nghệ sĩ";
             this.nghệSĩToolStripMenuItem.Click += new System.EventHandler(this.nghệSĩToolStripMenuItem_Click);
             // 
             // caSĩToolStripMenuItem
@@ -102,20 +101,10 @@
             this.fpn.Size = new System.Drawing.Size(1156, 657);
             this.fpn.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(905, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // find_user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.fpn);
             this.Controls.Add(this.menuStrip1);
             this.Name = "find_user";
@@ -136,6 +125,5 @@
         private System.Windows.Forms.ToolStripMenuItem caSĩToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lờiBàiHátToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel fpn;
-        private System.Windows.Forms.Label label1;
     }
 }

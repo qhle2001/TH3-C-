@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -30,7 +31,6 @@ namespace _20521363
             textout = text.Trim().ToLower();
             tấtCảToolStripMenuItem.BackColor = Color.FromArgb(0, 178, 238);
             find_result();
-            //load_singer();
             load_result();
         }
         List<Music> music_find;
@@ -90,6 +90,14 @@ namespace _20521363
 
         private void load_fpn(List<string> type, string text)
         {
+            if (text == "Nhạc sĩ")
+            {
+                load_category("Nhạc sĩ");
+            }
+            else
+            {
+                load_category("Thưc hiện");
+            }
             for (int i = 0; i < type.Count; i++)
             {
                 Label lbl = new Label();
@@ -123,7 +131,6 @@ namespace _20521363
                 ptb.Click += new EventHandler(ptb_click);
             }
         }
-        #endregion
         private void load_song(List<Music> songs)
         {
             load_category("Bài hát");
@@ -159,6 +166,33 @@ namespace _20521363
 
             }
         }
+        private void load_lyrics(List<Music> lyrics)
+        {
+            load_category("Lời bài hát");
+            for (int i = 0; i < lyrics.Count; i++)
+            {
+                Label lbl = new Label();
+                lbl.Text = "Lời bài hát: " + lyrics[i].Name;
+                lbl.Font = new Font("Times New Roman", 18, FontStyle.Bold);
+                lbl.AutoSize = true;
+
+                Label lbl2 = new Label();
+                lbl2.Text = lyrics[i].Lyrics;
+                lbl2.Font = new Font("Times New Roman", 16, FontStyle.Regular);
+                lbl2.AutoSize = true;
+                lbl2.Location = new Point(0, 35);
+                Panel pn = new Panel();
+                pn.Controls.Add(lbl2);
+                pn.Controls.Add(lbl);
+                pn.AutoSize = true;
+
+                fpn.Controls.Add(pn);
+                //ptb.Click += new EventHandler(ptb_click);
+
+            }
+        }
+        #endregion
+
         public Music music_out;
         private void ptb_click(object sender, EventArgs e)
         {
@@ -186,7 +220,6 @@ namespace _20521363
                     {
                         if (singer_all[j].Trim().ToLower() == ((PictureBox)sender).Tag.ToString().ToLower())
                         {
-                            label1.Text = singer_all[j].Trim();
                             list_song.Add(musicout[i]);
                             break;
                         }
@@ -224,30 +257,7 @@ namespace _20521363
                 lờiBàiHátToolStripMenuItem.BackColor = Color.FromArgb(224, 238, 224);
             }
         }
-        private void load_lyrics(List<Music> lyrics)
-        {
-            for (int i = 0; i < lyrics.Count; i++)
-            {
-                Label lbl = new Label();
-                lbl.Text = "Lời bài hát: " + lyrics[i].Name;
-                lbl.Font = new Font("Times New Roman", 18, FontStyle.Bold);
-                lbl.AutoSize = true;
-
-                Label lbl2 = new Label();
-                lbl2.Text = lyrics[i].Lyrics;
-                lbl2.Font = new Font("Times New Roman", 16, FontStyle.Regular);
-                lbl2.AutoSize = true;
-                lbl2.Location = new Point(0, 35);
-                Panel pn = new Panel();
-                pn.Controls.Add(lbl2);
-                pn.Controls.Add(lbl);
-                pn.AutoSize = true;
-
-                fpn.Controls.Add(pn);
-                //ptb.Click += new EventHandler(ptb_click);
-
-            }
-        }
+        
         #region loadauthorsinger
         private void load_fpn_author(List<string> author)
         {
@@ -274,154 +284,216 @@ namespace _20521363
             }
         }
         #endregion
+        #region solve
         List<Music> song;
         List<string> singer;
         List<string> author;
+        
+        private List<string> remove_repeat(List<string> input)
+        {
+            List<string> result = new List<string>();
+            for (int i = 0; i < input.Count; i++)
+            {
+                bool flag = false;
+                for (int check = 0; check < i; check++)
+                {
+                    if (input[i] == input[check])
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == false)
+                {
+                    result.Add(input[i]);
+                }
+            }
+            return result;
+        }
         private void load_result()
         {
-            if (check_music_global)
-            {
-                load_song(music_find);
-                load_category("Thưc hiện");
-                singer = new List<string>();
-                load_fpn_singer(singer);
-                load_fpn(singer, "Ca sĩ");
-                load_category("Nhạc sĩ");
-                author = new List<string>();
-                load_fpn_author(author);
-                load_fpn(author, "Nhạc sĩ");
-                load_category("Lời bài hát");
-                load_lyrics(music_find);
-            }
-            if (check_singer_global)
+            if (music_find.Count == 0)
             {
                 song = new List<Music>();
                 singer = new List<string>();
                 author = new List<string>();
-                for (int i = 0; i < music_find.Count; i++)
+                string[] text = textout.Trim().ToLower().Split(' ');
+                for (int i = 0; i < musicout.Count; i++)
                 {
-                    bool check_singer = false;
-                    string[] temp_singer = music_find[i].Singer.Split(',');
-                    for (int j = 0; j < temp_singer.Length; j++)
+                    int count_song = 0, count_singer = 0, count_author = 0;
+                    string[] name_temp = musicout[i].Name.ToLower().Split(' ');
+                    for (int j = 0; j < text.Length; j++)
                     {
-                        string temp = temp_singer[j].Trim();
-                        if (textout == temp.ToLower())
+                        for (int z = 0; z < name_temp.Length; z++)
                         {
-                            check_singer = true;
-                            song.Add(music_find[i]);
-                            singer.Add(temp);
-                            break;
+                            if (text[j] == name_temp[z])
+                            {
+                                count_song++;
+                            }
                         }
                     }
-                    if (check_singer)
+                    if (count_song == text.Length)
                     {
-                        string[] temp_author = music_find[i].Author.Split(',');
-                        for (int j = 0; j < temp_author.Length; j++)
+                        song.Add(musicout[i]);
+                    }
+
+                    string[] singer_temp = musicout[i].Singer.Split(',');
+                    for (int j = 0; j < singer_temp.Length; j++)
+                    {
+                        string[] singer_temp_ = singer_temp[j].Trim().ToLower().Split(' ');
+                        for (int z = 0; z < text.Length; z++)
                         {
-                            author.Add(temp_author[j].Trim());
+                            for (int k = 0; k < singer_temp_.Length; k++)
+                            {
+                                if (text[z] == singer_temp_[k])
+                                {
+                                    count_singer++;
+                                }
+                            }
+                        }
+                        if (count_singer == text.Length)
+                        {
+                            singer.Add(singer_temp[j]);
+                        }
+                    }
+
+                    string[] author_temp = musicout[i].Author.Split(',');
+                    for (int j = 0; j < author_temp.Length; j++)
+                    {
+                        string[] author_temp_ = author_temp[j].Trim().ToLower().Split(' ');
+                        for (int z = 0; z < text.Length; z++)
+                        {
+                            for (int k = 0; k < author_temp_.Length; k++)
+                            {
+                                if (text[z] == author_temp_[k])
+                                {
+                                    count_author++;
+                                }
+                            }
+                        }
+                        if (count_author == text.Length)
+                        {
+                            author.Add(author_temp[j]);
                         }
                     }
                 }
-                for (int i = 0; i < singer.Count - 1; i++)
-                {
-                    if (singer[i] == singer[i + 1])
-                    {
-                        singer.RemoveAt(i);
-                        i--;
-                    }
-                }
-                for (int i = 0; i < author.Count - 1; i++)
-                {
-                    if (author[i] == author[i + 1])
-                    {
-                        author.RemoveAt(i);
-                        i--;
-                    }
-                }
+                singer = remove_repeat(singer);
+                author = remove_repeat(author);
                 load_song(song);
-                load_category("Thưc hiện");
                 load_fpn(singer, "Ca sĩ");
-                load_category("Nhạc sĩ");
                 load_fpn(author, "Nhạc sĩ");
-                load_category("Lời bài hát");
                 load_lyrics(song);
             }
-            if (check_author_global)
+            else
             {
-                bool check_singer_ = true;
-                for (int i = 0; i < music_find.Count; i++)
+                if (check_music_global)
                 {
-                    string[] temp_singer = music_find[i].Singer.Split(',');
-                    for (int j = 0; j < temp_singer.Length; j++)
-                    {
-                        string temp = temp_singer[j].Trim();
-                        if (textout == temp.ToLower())
-                        {
-                            check_singer_ = false;
-                            break;
-                        }
-                    }
-                    if (check_singer_ == false)
-                    {
-                        break;
-                    }
+                    load_song(music_find);
+                    singer = new List<string>();
+                    load_fpn_singer(singer);
+                    load_fpn(singer, "Ca sĩ");
+                    author = new List<string>();
+                    load_fpn_author(author);
+                    load_fpn(author, "Nhạc sĩ");
+                    load_lyrics(music_find);
                 }
-                if (check_singer_)
+                if (check_singer_global)
                 {
                     song = new List<Music>();
                     singer = new List<string>();
                     author = new List<string>();
                     for (int i = 0; i < music_find.Count; i++)
                     {
-                        bool check_author = false;
-                        string[] temp_author = music_find[i].Author.Split(',');
-                        for (int j = 0; j < temp_author.Length; j++)
+                        bool check_singer = false;
+                        string[] temp_singer = music_find[i].Singer.Split(',');
+                        for (int j = 0; j < temp_singer.Length; j++)
                         {
-                            string temp = temp_author[j].Trim();
+                            string temp = temp_singer[j].Trim();
                             if (textout == temp.ToLower())
                             {
-                                check_author = true;
+                                check_singer = true;
                                 song.Add(music_find[i]);
-                                author.Add(temp);
+                                singer.Add(temp);
                                 break;
                             }
                         }
-                        if (check_author)
+                        if (check_singer)
                         {
-                            string[] temp_singer = music_find[i].Singer.Split(',');
-                            for (int j = 0; j < temp_singer.Length; j++)
+                            string[] temp_author = music_find[i].Author.Split(',');
+                            for (int j = 0; j < temp_author.Length; j++)
                             {
-                                singer.Add(temp_singer[j].Trim());
+                                author.Add(temp_author[j].Trim());
                             }
                         }
                     }
-                    for (int i = 0; i < singer.Count - 1; i++)
-                    {
-                        if (singer[i] == singer[i + 1])
-                        {
-                            singer.RemoveAt(i);
-                            i--;
-                        }
-                    }
-                    for (int i = 0; i < author.Count - 1; i++)
-                    {
-                        if (author[i] == author[i + 1])
-                        {
-                            author.RemoveAt(i);
-                            i--;
-                        }
-                    }
+                    singer = remove_repeat(singer);
+                    author = remove_repeat(author);
                     load_song(song);
-                    load_category("Thưc hiện");
                     load_fpn(singer, "Ca sĩ");
-                    load_category("Nhạc sĩ");
                     load_fpn(author, "Nhạc sĩ");
-                    load_category("Lời bài hát");
                     load_lyrics(song);
+                }
+                if (check_author_global)
+                {
+                    bool check_singer_ = true;
+                    for (int i = 0; i < music_find.Count; i++)
+                    {
+                        string[] temp_singer = music_find[i].Singer.Split(',');
+                        for (int j = 0; j < temp_singer.Length; j++)
+                        {
+                            string temp = temp_singer[j].Trim();
+                            if (textout == temp.ToLower())
+                            {
+                                check_singer_ = false;
+                                break;
+                            }
+                        }
+                        if (check_singer_ == false)
+                        {
+                            break;
+                        }
+                    }
+                    if (check_singer_)
+                    {
+                        song = new List<Music>();
+                        singer = new List<string>();
+                        author = new List<string>();
+                        for (int i = 0; i < music_find.Count; i++)
+                        {
+                            bool check_author = false;
+                            string[] temp_author = music_find[i].Author.Split(',');
+                            for (int j = 0; j < temp_author.Length; j++)
+                            {
+                                string temp = temp_author[j].Trim();
+                                if (textout == temp.ToLower())
+                                {
+                                    check_author = true;
+                                    song.Add(music_find[i]);
+                                    author.Add(temp);
+                                    break;
+                                }
+                            }
+                            if (check_author)
+                            {
+                                string[] temp_singer = music_find[i].Singer.Split(',');
+                                for (int j = 0; j < temp_singer.Length; j++)
+                                {
+                                    singer.Add(temp_singer[j].Trim());
+                                }
+                            }
+                        }
+                        singer = remove_repeat(singer);
+                        author = remove_repeat(author);
+                        load_song(song);
+                        load_fpn(singer, "Ca sĩ");
+                        load_fpn(author, "Nhạc sĩ");
+                        load_lyrics(song);
+                    }
                 }
             }
         }
-
+        #endregion
+        #region event menu
         private void tấtCảToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tấtCảToolStripMenuItem.BackColor = Color.FromArgb(0, 178, 238);
@@ -459,7 +531,6 @@ namespace _20521363
             caSĩToolStripMenuItem.BackColor = Color.FromArgb(224, 238, 224);
             lờiBàiHátToolStripMenuItem.BackColor = Color.FromArgb(224, 238, 224);
             fpn.Controls.Clear();
-            load_category("Thưc hiện");
             load_fpn(singer, "Ca sĩ");
         }
 
@@ -471,7 +542,6 @@ namespace _20521363
             caSĩToolStripMenuItem.BackColor = Color.FromArgb(0, 178, 238);
             lờiBàiHátToolStripMenuItem.BackColor = Color.FromArgb(224, 238, 224);
             fpn.Controls.Clear();
-            load_category("Nhạc sĩ");
             load_fpn(author, "Nhạc sĩ");
         }
 
@@ -493,4 +563,5 @@ namespace _20521363
             }
         }
     }
+    #endregion
 }
