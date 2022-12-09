@@ -1,4 +1,5 @@
 ﻿using _20521363.Model;
+using AxWMPLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 using static _20521363.Main;
 
 namespace _20521363
@@ -42,6 +44,7 @@ namespace _20521363
             trackBar1.Value = 50;
             lb_volume.Text = trackBar1.Value.ToString();
         }
+
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
@@ -158,6 +161,24 @@ namespace _20521363
         {
             form_download newform = new form_download(play_[listBox1.SelectedIndex].Mp3_4);
             newform.ShowDialog();
+        }
+
+        private void progressBar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * e.X / progressBar1.Width;
+        }
+
+        private void axWindowsMediaPlayer1_PlayStateChange(object sender, _WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            if (e.newState == 1)
+            {
+                if (listBox1.SelectedIndex != listBox1.Items.Count - 1)
+                {
+                    BeginInvoke(new Action(() => {
+                        listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
+                    }));
+                }
+            }
         }
     }
 }
