@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _20521363.Model;
 using _20521363.Properties;
+using AxWMPLib;
 
 
 namespace _20521363
